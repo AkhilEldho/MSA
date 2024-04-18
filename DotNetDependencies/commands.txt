@@ -1,0 +1,24 @@
+run the command on terminal to install net8.0 dependecies
+
+check what version is installed make sure this is up to date
+-dotnet --list-sdks
+
+this command creates the necessary files including program.cs
+-dotnet new console -f net8.0
+
+this runs the program.cs
+-dotnet run
+
+adding Humanizer
+Humanizer allows to manipulate data and write it to the console
+-dotnet add package Humanizer --version 2.7.9
+
+to find outdated patchs
+-dotnet list package --outdated
+
+this gets the stable version of the packages
+-dotnet list package --outdated --include-prerelease
+
+add --version to get a specific version
+-dotnet add package Humanizer --version 2.11.10
+

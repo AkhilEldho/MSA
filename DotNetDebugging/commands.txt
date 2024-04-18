@@ -1,0 +1,44 @@
+This command creates a Program.cs file in your folder with a basic "Hello World" program already written. It also creates a C# project file named DotNetDebugging.csproj.
+-dotnet new console
+
+run the program
+-dotnet run
+
+System.Console - Console.WriteLine("This message is readable by the end user.");
+-Always enabled and always writes to the console.
+-Useful for information that your customer might need to see in the release.
+-Because it's the simplest approach, it's often used for ad-hoc temporary debugging. This debug code is often never checked in to source control.
+
+System.Diagnostics.Trace - Trace.WriteLine("This is a trace message when tracing the app.");
+-Only enabled when TRACE is defined.
+-Writes to attached Listeners, by default, the DefaultTraceListener.
+-Use this API when you create logs that will be enabled in most builds.
+
+System.Diagnostics.Debug - Debug.WriteLine("This is a debug message just for developers.");
+Only enabled when DEBUG is defined (when in debug mode).
+Writes to an attached debugger.
+Use this API when you create logs that will be enabled only in debug builds.
+
+Check csproj for turning on TRACE for both Debug and Release configurations in addition to DEBUG for Debug configurations.
+
+Conditional tracing
+-can use if statement
+if(count == 0)
+    Debug.WriteLine("The count is 0 and this may cause an exception.");
+
+but single line is better
+Debug.WriteLineIf(count == 0, "The count is 0 and this may cause an exception.");
+
+can use Trace as well
+bool errorFlag = false;  
+System.Diagnostics.Trace.WriteIf(errorFlag, "Error in AppendData procedure.");  
+System.Diagnostics.Debug.WriteIf(errorFlag, "Transaction abandoned.");  
+System.Diagnostics.Trace.Write("Invalid value for data request");
+
+Use the System.Diagnostics.Debug.Assert method freely to test conditions that should hold true if your code is correct.
+int IntegerDivide(int dividend, int divisor)
+{
+    Debug.Assert(divisor != 0, $"{nameof(divisor)} is 0 and will cause an exception.");
+
+    return dividend / divisor;
+}

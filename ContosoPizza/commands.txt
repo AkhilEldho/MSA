@@ -1,0 +1,31 @@
+REST: A common pattern for building APIs with HTTP
+Representational State Transfer (REST) is an architectural style for building web services. REST requests are made over HTTP. 
+
+GET: Retrieve data from the web service.
+POST: Create a new item of data on the web service.
+PUT: Update an item of data on the web service.
+PATCH: Update an item of data on the web service by describing a set of instructions about how the item should be modified. The sample application in this module doesn't use this verb.
+DELETE: Delete an item of data on the web service.
+
+Creates new controllers etc
+-dotnet new webapi -controllers -f net8.0
+
+URL: http://localhost:5199/weatherforecast
+
+The preceding command installs the .NET HTTP REPL command-line tool that you use to make HTTP requests to the web API.
+-dotnet tool install -g Microsoft.dotnet-httprepl
+
+Connect to the web API by running the following command:
+-httprepl https://localhost:{PORT}
+
+Create new folder
+-mkdir Models
+
+Don't forget to install REST client to sent requests
+
+NoContent		204	The pizza was updated in the in-memory cache.
+BadRequest		400	The request body's Id value doesn't match the route's id value.
+BadRequest is implied	400	The request body's Pizza object is invalid.
+
+
+

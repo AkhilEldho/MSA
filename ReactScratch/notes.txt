@@ -1,0 +1,27 @@
+Understand the project structure
+Our core setup has two main folders that store code:
+
+public
+-Contains any HTML, CSS, images, or other static files
+-Stores our index.html and index.css files
+
+src
+-Contains any files that need to be rendered
+-Stores all .jsx files
+
+We'll also create two files to configure our application:
+-package.json: Contains the list of packages and scripts for our application
+-snowpack.config.js: Contains configuration options for Snowpack
+-We need three main packages for our application:
+
+Snowpack: Used to render JSX to HTML and JavaScript
+React: Used to create our components
+React-DOM: Used to mount our application
+
+
+# Windows
+md react-recipes && cd react-recipes
+md src
+md public
+touch package.json
+echo "{}" > package.json

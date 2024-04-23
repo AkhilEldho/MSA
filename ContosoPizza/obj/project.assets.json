@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\akhil\\Downloads\\Documents\\VS\\ContosoPizza\\ContosoPizza.csproj",
+      "projectUniqueName": "C:\\Users\\akhil\\Downloads\\Documents\\MSA\\ContosoPizza\\ContosoPizza.csproj",
       "projectName": "ContosoPizza",
-      "projectPath": "C:\\Users\\akhil\\Downloads\\Documents\\VS\\ContosoPizza\\ContosoPizza.csproj",
+      "projectPath": "C:\\Users\\akhil\\Downloads\\Documents\\MSA\\ContosoPizza\\ContosoPizza.csproj",
       "packagesPath": "C:\\Users\\akhil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akhil\\Downloads\\Documents\\VS\\ContosoPizza\\obj\\",
+      "outputPath": "C:\\Users\\akhil\\Downloads\\Documents\\MSA\\ContosoPizza\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\akhil\\AppData\\Roaming\\NuGet\\NuGet.Config",

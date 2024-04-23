@@ -8,18 +8,28 @@ PATCH: Update an item of data on the web service by describing a set of instruct
 DELETE: Delete an item of data on the web service.
 
 Creates new controllers etc
--dotnet new webapi -controllers -f net8.0
+- dotnet new webapi -controllers -f net8.0
 
 URL: http://localhost:5199/weatherforecast
 
 The preceding command installs the .NET HTTP REPL command-line tool that you use to make HTTP requests to the web API.
--dotnet tool install -g Microsoft.dotnet-httprepl
+- dotnet tool install -g Microsoft.dotnet-httprepl
 
 Connect to the web API by running the following command:
--httprepl https://localhost:{PORT}
+- httprepl https://localhost:{PORT}
+- connect https://localhost:{PORT}
+
+IF UNABLE TO CONNECT
+- dotnet dev-certs https --trust
+
+to see all the endpoints
+- ls
+
+to access avaliable apis
+- cd
 
 Create new folder
--mkdir Models
+- mkdir Models
 
 Don't forget to install REST client to sent requests
 

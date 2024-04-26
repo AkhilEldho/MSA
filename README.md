@@ -3,16 +3,6 @@
 ## Introduction
 Welcome to Phase 1 of the Microsoft Student Accelerator (MSA) program for 2024! This README serves as a guide to the projects and modules covered during this phase in the Software Development stream.
 
-## Projects
-### Week 1: Contosso Pizza
-The Contoso Pizza project focuses on building and navigating through a Web API, covering principles of RESTful API design, CRUD operations, and MVCS pattern.
-
-### Week 2: Simple Website
-The Simple Website project emphasizes progressive enhancement in web development, separation of concerns, and basic web accessibility.
-
-## Schedule and Modules
-Phase 1 is divided into six weeks, with each week covering topics in Software Development. Here's a brief overview:
-
 ### Week 1
 - Introduction to GitHub
 - Write your first C# code
@@ -20,6 +10,10 @@ Phase 1 is divided into six weeks, with each week covering topics in Software De
 - Create a new .NET project and work with dependencies
 - Interactively debug .NET apps with the Visual Studio Code debugger
 - Create a web API with ASP.NET Core controllers
+
+## Project
+### Week 1: Contosso Pizza
+The Contoso Pizza project focuses on building and navigating through a Web API, covering principles of RESTful API design, CRUD operations, and MVCS pattern.
 
 ### Week 2
 - Get started with web development using Visual Studio Code
@@ -29,6 +23,10 @@ Phase 1 is divided into six weeks, with each week covering topics in Software De
 - Get started with React
 - Working with data and properties in React components
 - React state and events
+
+## Project
+### Week 2: Simple Website
+The Simple Website project emphasizes progressive enhancement in web development, separation of concerns, and basic web accessibility.
 
 ### Week 3
 - Get started with TypeScript

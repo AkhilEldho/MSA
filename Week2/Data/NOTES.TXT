@@ -1,0 +1,5 @@
+# Windows
+git clone https://github.com/MicrosoftDocs/mslearn-react
+cd mslearn-react\code\2-component-data\start
+code .
+

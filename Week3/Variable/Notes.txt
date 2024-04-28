@@ -1,0 +1,154 @@
+Using int variables
+let x: number;   //* Explicitly declares x as a number type
+let y = 1;       //* Implicitly declares y as a number type
+let z;           //* Declares z without initializing it
+
+Using string variables
+let firstName: string = "Mateo";
+let sentence: string = `My name is ${firstName}.
+    I am new to TypeScript.`;
+console.log(sentence);
+
+
+Using enumerations:
+Helps reduce errors caused by transposing or mistyping numbers.
+Makes it easy to change values in the future.
+Makes code easier to read, which means it's less likely that errors will creep into it.
+Ensures forward compatibility. 
+With enumerations, your code is less likely to fail if someone changes the values corresponding to the member names in the future.
+
+ENUM Creation
+
+- enum ContractStatus {
+       Permanent,
+       Temp,
+       Apprentice
+  }
+
+Making using of enum
+- let employeeStatus: ContractStatus = ContractStatus.Temp;
+- console.log(employeeStatus);
+
+In Enum each items are starting from index 0 unless stated otherwise
+-enum ContractStatus {
+      Permanent = 1,
+      Temp,
+      Apprentice
+ }
+
+any type value saves anything
+let randomValue: any = 10;
+randomValue = 'Mateo';   // OK
+randomValue = true;      // OK
+
+IMPORTANT
+Remember that all the convenience of any comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript. You should avoid using any when it's not necessary.
+
+While flexible, the any type can cause unexpected errors. To address this issue, TypeScript introduced the unknown type.
+
+NOTE
+The core difference between any and unknown is you are unable to interact with a variable of type unknown; doing so generates a compiler error. any bypasses any compile-time checks, and the object is evaluated at runtime; 
+if the method or property exists it will behave as expected.
+
+ASSERTION
+declaring the value as a type before changing it
+- (randomValue as string).toUpperCase();
+- (<string>randomValue).toUpperCase();
+
+let randomValue: unknown = 10;
+
+randomValue = true;
+randomValue = 'Mateo';
+
+if (typeof randomValue === "string") {
+    console.log((randomValue as string).toUpperCase());    //* Returns MATEO to the console.
+} else {
+    console.log("Error - A string was expected here.");    //* Returns an error message.
+}
+
+TYPE GUARD
+use of typeof in the if block
+- string	typeof s === "string"
+- number	typeof n === "number"
+- boolean	typeof b === "boolean"
+- undefined	typeof undefined === "undefined"
+- function	typeof f === "function"
+- array	    Array.isArray(a)
+
+UNION TYPE
+let multiType: number | boolean;
+multiType = 20;         //* Valid
+multiType = true;       //* Valid
+multiType = "twenty";   //* Invalid
+
+function add(x: number | string, y: number | string) {
+    if (typeof x === 'number' && typeof y === 'number') {
+        return x + y;
+    }
+    if (typeof x === 'string' && typeof y === 'string') {
+        return x.concat(y);
+    }
+    throw new Error('Parameters must be numbers or strings');
+}
+console.log(add('one', 'two'));  //* Returns "onetwo"
+console.log(add(1, 2));          //* Returns 3
+console.log(add('one', 2));      //* Returns error
+
+INTERSECTION
+An intersection type combines two or more types to create a new type that has all properties of the existing types. 
+An intersection allows you to add together existing types to get a single type that has all the features you need.
+
+interface Employee {
+  employeeID: number;
+  age: number;
+}
+interface Manager {
+  stockPlan: boolean;
+}
+type ManagementEmployee = Employee & Manager;
+let newManager: ManagementEmployee = {
+    employeeID: 12345,
+    age: 34,
+    stockPlan: true
+};
+
+LITERAL
+type testResult = "pass" | "fail" | "incomplete";
+let myResult: testResult;
+myResult = "incomplete";    //* Valid
+myResult = "pass";          //* Valid
+myResult = "failure";       //* Invalid
+
+type dice = 1 | 2 | 3 | 4 | 5 | 6;
+let diceRoll: dice;
+diceRoll = 1;    //* Valid
+diceRoll = 2;    //* Valid
+diceRoll = 7;    //* Invalid
+
+ARRAYS
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+
+TUPLES
+Having an array of the same value types is useful, but sometimes you have an array that contains values of mixed types.
+- let person1: [string, number] = ['Marcia', 35];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

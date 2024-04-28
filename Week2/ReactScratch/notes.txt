@@ -23,5 +23,14 @@ React-DOM: Used to mount our application
 md react-recipes && cd react-recipes
 md src
 md public
+npm init
+npm install
+npm install --save-dev snowpack
+npm install react react-dom
+
+add index.html
+add index.jsx
+
+got error
 touch package.json
 echo "{}" > package.json

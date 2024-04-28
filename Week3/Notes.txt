@@ -1,0 +1,31 @@
+to install typscript
+- npm install -g typescript
+- npm install -g npx
+
+to create the empty file
+- npx tsc --init
+
+The compiler should run without errors.
+- npx tsc module01.ts. 
+
+Notice that a new JavaScript file has been added, but it isn't in the build folder in the Explorer. You might need to refresh the Explorer pane to view the file. When you run the tsc command on a single file, the compiler ignores the tsconfig.json file.
+
+To load the config file and compile all the .ts files in the folder, run tsc without a file name. This command should add the .js file to the build folder. Remember to delete the extra .js file in the root folder.
+- npx tsc
+
+Open the module01.js file, and then select the Split Editor Right button at the upper right to open a new editor view.
+You should now be able to see the .ts and .js files side by side. Notice that they're identical, except that the .js file doesn't include the new type annotations.
+At the Terminal command prompt, enter node ./build/module01.js. This command runs the JavaScript and displays the result in the console log.
+- node ./build/module01.js
+
+
+Entering the .ts file extension is optional.
+
+To control the compilation, you can use compiler options with the tsc command, including:
+
+The --noImplicitAny option instructs the compiler to raise errors on expressions and declarations with an implied any type. For example:
+tsc utility_functions.ts --noImplicitAny
+
+The --target option specifies the ECMAScript target version for the JavaScript file. This example compiles an ECMAScript 6 compliant JavaScript file:
+tsc utility_functions.ts --target "ES2015"
+

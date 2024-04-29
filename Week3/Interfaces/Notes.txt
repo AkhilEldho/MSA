@@ -1,0 +1,33 @@
+INTERFACE
+
+interface Employee {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+
+an interface's job is to describe a type of object
+
+-example
+let employee: Employee = {
+    firstName : "Emil",
+    lastName: "Andersson",
+    fullName(): string {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+TYPE
+type is similar to interface but key difference being it cannot be reopened to add new values.
+whereas interface it's extendable
+
+Required	All properties are required.	firstName: string;
+Optional	Add a question mark (?) to the end of the property name. Use this for properties that are not required.	firstName?: string;
+Read only	Use this for properties that should only be modified when an object is first created.	readonly firstName: string;
+
+
+
+
+
+
+

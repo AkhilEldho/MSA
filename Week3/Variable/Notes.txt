@@ -113,6 +113,7 @@ let newManager: ManagementEmployee = {
 };
 
 LITERAL
+TYPE
 type testResult = "pass" | "fail" | "incomplete";
 let myResult: testResult;
 myResult = "incomplete";    //* Valid

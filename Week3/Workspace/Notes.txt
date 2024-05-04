@@ -18,6 +18,12 @@ You should now be able to see the .ts and .js files side by side. Notice that th
 At the Terminal command prompt, enter node ./build/module01.js. This command runs the JavaScript and displays the result in the console log.
 - node ./build/module01.js
 
+TO ENABLE SCRIPT
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+TO DISABLE SCRIPT
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Default
+
 
 Entering the .ts file extension is optional.
 

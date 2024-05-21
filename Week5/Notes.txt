@@ -1,0 +1,22 @@
+TERMINAL CODE
+-dotnet build
+
+adding packages
+-dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+-dotnet add package Microsoft.EntityFrameworkCore.Design
+-dotnet tool install --global dotnet-ef
+
+If dotnet ef is already installed, you can update it by running dotnet tool 
+-update --global dotnet-ef.
+
+run migration
+-dotnet ef migrations add InitialCreate --context PizzaContext
+
+InitialCreate
+-dotnet ef database update --context PizzaContext
+
+migrate after changes
+-dotnet ef migrations add ModelRevisions --context PizzaContext
+
+apply changes
+-dotnet ef database update --context PizzaContext

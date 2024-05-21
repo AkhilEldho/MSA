@@ -1,0 +1,13 @@
+mininal api start
+-dotnet new web -o PizzaStore -f net8.0
+
+run project for url
+-dotnet run
+
+install swagger package 
+-dotnet add package Swashbuckle.AspNetCore --version 6.5.0
+
+check package in project.csproj file
+-<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+
+-updage program.cs

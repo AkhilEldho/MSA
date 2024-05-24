@@ -11,3 +11,23 @@ check package in project.csproj file
 -<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 
 -updage program.cs
+
+add framework
+-dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 8.0
+
+add db
+-dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 8.0
+-dotnet tool install --global dotnet-ef
+-dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0
+
+migration
+-dotnet ef migrations add InitialCreate
+
+update
+-dotnet ef database update
+
+
+
+
+
+
